@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "util.h"
 
 int main() {
-  int solution = 2; // Initialize with first value (2)
+  int solution = 0;
 
   int fib1 = 1;
   int fib2 = 2;
@@ -10,13 +11,14 @@ int main() {
   int MAX = 4000000;
 
   while (fib2 < MAX) {
+    if (is_even(fib2)) {
+      solution += fib2;
+    }
+
     temp_fib = fib1;
     fib1 = fib2;
     fib2 += temp_fib;
 
-    if (fib2 % 2 == 0) {
-      solution += fib2;
-    }
   }
 
   printf("%i\n", solution);
