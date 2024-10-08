@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-  unsigned long long sol = 13195;//600851475143;
+  unsigned long long sol = 600851475143;
   unsigned long long i;
-  
-  for (i = 2; i < sol / 2; i++) {
+
+  // Remove smallest prime factors by working way up
+  for (i = 2; i < sqrt(sol) / 2; i++) {
     while (sol % i == 0) {
       printf("%llu /= %llu -> %llu\n", sol, i, sol / i);
       sol /= i;
