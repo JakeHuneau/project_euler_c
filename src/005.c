@@ -18,6 +18,6 @@ int main() {
   }
 
   printf("%llu\n", solution);
-  
+
   return 0;
 }

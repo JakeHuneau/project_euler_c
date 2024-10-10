@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "util.h"
+#include <stdio.h>
 
 int main() {
   int solution = 0;
@@ -18,7 +18,6 @@ int main() {
     temp_fib = fib1;
     fib1 = fib2;
     fib2 += temp_fib;
-
   }
 
   printf("%i\n", solution);

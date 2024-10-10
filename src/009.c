@@ -18,6 +18,6 @@ int main() {
   unsigned long b = 2 * m * n;
   unsigned long c = m * m + n * n;
   printf("%lu\n", a * b * c);
-    
+
   return 0;
 }

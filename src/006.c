@@ -13,6 +13,6 @@ int main() {
   unsigned long long diff = square_of_sums - sum_of_squares;
 
   printf("%llu", diff);
-  
+
   return 0;
 }

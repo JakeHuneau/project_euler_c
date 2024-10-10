@@ -1,11 +1,11 @@
 // prime.c
-#include <prime.h>
 #include <math.h>
+#include <prime.h>
 #include <stdlib.h>
 
 // Creates an array where array[i] says if that's a prime number
-int* create_prime_sieve(unsigned long size) {
-    int *sieve = (int *)malloc(size * sizeof(int));
+int *create_prime_sieve(unsigned long size) {
+  int *sieve = (int *)malloc(size * sizeof(int));
 
   for (int i = 0; i < size; i++) {
     sieve[i] = 1; // Start by assuming everything is a prime
@@ -13,7 +13,7 @@ int* create_prime_sieve(unsigned long size) {
 
   for (unsigned long i = 2; i < sqrt(size); i++) {
     unsigned long current_value = i;
-    while(1) {
+    while (1) {
       current_value += i;
       if (current_value >= size) {
         break;
@@ -29,7 +29,7 @@ int* create_prime_sieve(unsigned long size) {
 unsigned long get_nth_prime(unsigned long n) {
   // n * (log(n) + log(log(n)) - 1) is a good approximation of Nth prime.
   // Take of the -1 to be a little bigger and save
-  unsigned long sieve_size = n * (log(n) + log(log(n))); 
+  unsigned long sieve_size = n * (log(n) + log(log(n)));
   // big sieve so need to use heap
   int *sieve = create_prime_sieve(sieve_size);
 
@@ -49,6 +49,4 @@ unsigned long get_nth_prime(unsigned long n) {
   free(sieve);
 
   return current_prime;
-  
 }
-
