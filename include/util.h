@@ -9,5 +9,6 @@ typedef struct {
   int size;
 } Factors;
 Factors get_factors(unsigned long num);
+unsigned long long get_next_collatz(unsigned long long);
 
 #endif

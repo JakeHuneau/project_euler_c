@@ -28,3 +28,12 @@ unsigned long long get_triangle_number(unsigned long num) {
   // (n * (n+1)) / 2
   return (num * (num + 1)) / 2;
 }
+
+unsigned long long get_next_collatz(unsigned long long current_num) {
+  // n -> n / 2 (even n)
+  // n -> 3n + 1 (odd n)
+  if (is_even(current_num)) {
+    return current_num / 2;
+  }
+  return 3 * current_num + 1;
+}
