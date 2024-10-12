@@ -6,8 +6,7 @@
 int main() {
   long max_value = 1000000;
   // Make a map of known sequence lengths
-  unsigned long *sequence_lengths =
-      (unsigned long *)calloc(max_value, sizeof(unsigned long));
+  unsigned long *sequence_lengths = calloc(max_value, sizeof(unsigned long));
 
   unsigned long longest = 0;
   unsigned long longest_length = 0;
@@ -32,6 +31,8 @@ int main() {
       longest_length = current_length;
     }
   }
+
+  free(sequence_lengths);
 
   printf("longest: %lu\n", longest);
 
