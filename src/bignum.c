@@ -46,11 +46,11 @@ BigNum carryover_bignum(BigNum bignum) {
     return_bignum.digits[i + 1] = carry;
   }
 
-  if (return_bignum.digits[return_bignum.num_digits - 1] == 0) {
+  while (return_bignum.digits[return_bignum.num_digits - 1] == 0) {
     // Didn't have a final carryover
-    return_bignum.num_digits = bignum.num_digits;
+    return_bignum.num_digits--;
     return_bignum.digits = (unsigned int *)realloc(
-        return_bignum.digits, bignum.num_digits * sizeof(unsigned int));
+        return_bignum.digits, return_bignum.num_digits * sizeof(unsigned int));
   }
 
   free(bignum.digits);
@@ -72,4 +72,29 @@ BigNum add_bignum(BigNum bignum1, BigNum bignum2) {
     }
   }
   return carryover_bignum(sum_bignum);
+}
+
+BigNum multiplay_bignum(BigNum bignum1, BigNum bignum2) {
+  // 99 * 99 = 9801 => Length can be sum of both parts size
+  BigNum prod_bignum = new_bignum(bignum1.num_digits + bignum2.num_digits);
+
+  // ex: bignum1 = 12, bignum2 = 34
+  //   12
+  //  x45
+  //  ---
+  //   60
+  // +480
+  // ----
+  //  540
+  //
+  // So this is really (12 * 5) + (12 * 40)
+  // And (12 * 5) is really (10 * 5) + (2 * 5) = (50 + 10)
+  // {2, 1} * {5, 4}
+  // {10, 5, 0} + {0, 8, 4} = {10, 13, 4} = {0, 14, 4} = {0, 4, 5}
+  for (int i = 0; i < bignum1.num_digits; i++) {
+    for (int j = 0; j < bignum2.num_digits; j++) {
+      prod_bignum.digits[i + j] += bignum1.digits[i] * bignum2.digits[j];
+    }
+  }
+  return carryover_bignum(prod_bignum);
 }

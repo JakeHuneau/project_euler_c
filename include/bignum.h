@@ -9,6 +9,7 @@ typedef struct {
   unsigned int num_digits;
 } BigNum;
 BigNum add_bignum(BigNum, BigNum);
+BigNum multiplay_bignum(BigNum, BigNum);
 BigNum new_bignum(unsigned int);
 BigNum bignum_from_string(char[], unsigned int length);
 BigNum carryover_bignum(BigNum);
