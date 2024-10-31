@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * Uses Disparate variation of Gaussian algorithm
  * w = (d + floor(2.6 m - 0.2) + y + floor(y/4) + floor(c/4) - 2c) mod 7
@@ -30,6 +28,5 @@ int main() {
       }
     }
   }
-  printf("%d\n", sol);
-  return 0;
+  return sol != 171;
 }

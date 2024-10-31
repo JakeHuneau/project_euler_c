@@ -1,5 +1,4 @@
 #include "bignum.h"
-#include <stdio.h>
 
 int main() {
   BigNum num = bignum_from_string("1", 1);
@@ -13,7 +12,5 @@ int main() {
     sum += num.digits[i];
   }
 
-  printf("%i\n", sum);
-
-  return 0;
+  return sum != 1366;
 }

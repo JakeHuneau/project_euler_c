@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   unsigned long long solution = 2;
 
@@ -17,7 +15,5 @@ int main() {
     solution += 2;
   }
 
-  printf("%llu\n", solution);
-
-  return 0;
+  return solution != 232792560;
 }

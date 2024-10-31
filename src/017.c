@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 // Counts letters up to a thousand
 int count_letters(int number) {
   // One, Two, Three, ..., nine
@@ -46,6 +44,5 @@ int main() {
   for (int i = 1; i <= 1000; i++) {
     sum += count_letters(i);
   }
-  printf("%u\n", sum);
-  return 0;
+  return sum != 21124;
 }

@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   unsigned long long sum_of_squares = 0;
   unsigned long long square_of_sums = 0;
@@ -12,7 +10,5 @@ int main() {
 
   unsigned long long diff = square_of_sums - sum_of_squares;
 
-  printf("%llu", diff);
-
-  return 0;
+  return diff != 25164150;
 }

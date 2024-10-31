@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   // ExE grid has E+1 corners.
   // 2x2 has 9 corners
@@ -32,7 +30,5 @@ int main() {
     }
   }
 
-  printf("%llu\n", grid[0][0]);
-
-  return 0;
+  return grid[0][0] != 137846528820;
 }

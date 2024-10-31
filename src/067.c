@@ -1,5 +1,4 @@
 #include <math.h>
-#include <stdio.h>
 
 int main() {
   enum { SIZE = 100 };
@@ -343,7 +342,5 @@ int main() {
     }
   }
 
-  printf("%d\n", values[0][0]);
-
-  return 0;
+  return values[0][0] != 7273;
 }

@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   // Formatted number into an array on the stack
   int numbers[] = {
@@ -61,7 +59,5 @@ int main() {
     }
   }
 
-  printf("%lu\n", biggest_product);
-
-  return 0;
+  return biggest_product != 23514624000;
 }

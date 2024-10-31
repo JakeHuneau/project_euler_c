@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
 
   enum { EDGE = 20 };
@@ -90,7 +88,5 @@ int main() {
     }
   }
 
-  printf("%lu\n", solution);
-
-  return 0;
+  return solution != 70600674;
 }

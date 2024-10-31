@@ -1,6 +1,5 @@
 // 014.c
 #include "util.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -34,7 +33,5 @@ int main() {
 
   free(sequence_lengths);
 
-  printf("longest: %lu\n", longest);
-
-  return 0;
+  return longest != 837799;
 }

@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   int sum = 0;
 
@@ -8,6 +6,5 @@ int main() {
       sum += i;
     }
   }
-  printf("%i\n", sum);
-  return 0;
+  return sum != 233168;
 }

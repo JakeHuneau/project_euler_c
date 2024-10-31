@@ -13,8 +13,11 @@ Factors get_factors(unsigned long num) {
   for (unsigned long i = 1; i <= sqrt(num); i++) {
     if (num % i == 0) {
       result.array[result.size] = i;
-      result.array[result.size + 1] = num / i; // Add other side too
-      result.size += 2;
+      result.size++;
+      if ((num / i) != i) {
+        result.array[result.size] = num / i; // Add other side too
+        result.size++;
+      }
     }
   }
 

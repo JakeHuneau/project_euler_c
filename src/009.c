@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   // euclid's formula
   // a^2 + b^2 = c^2
@@ -17,7 +15,7 @@ int main() {
   unsigned long a = m * m - n * n;
   unsigned long b = 2 * m * n;
   unsigned long c = m * m + n * n;
-  printf("%lu\n", a * b * c);
+  unsigned long sol = a * b * c;
 
-  return 0;
+  return sol != 31875000;
 }

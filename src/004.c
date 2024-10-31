@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 unsigned long reverse_number(unsigned long n) {
   unsigned long reversed = 0;
 
@@ -27,6 +25,5 @@ int main() {
       }
     }
   }
-  printf("%lu\n", solution);
-  return 0;
+  return solution != 906609;
 }

@@ -13,6 +13,5 @@ int main() {
   for (int i = 0; i < sol.num_digits; i++) {
     sum += sol.digits[i];
   }
-  printf("%lu\n", sum);
-  return 0;
+  return sum != 648;
 }

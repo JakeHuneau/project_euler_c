@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <util.h>
 
 long sum_factors(int num) {
@@ -20,6 +19,5 @@ int main() {
       sum += sf1;
     }
   }
-  printf("%lu", sum);
-  return 0;
+  return sum != 31626;
 }

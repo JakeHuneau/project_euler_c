@@ -52,7 +52,5 @@ int main() {
     }
   }
 
-  printf("%llu\n", sum);
-
-  return 0;
+  return sum != 871198282;
 }

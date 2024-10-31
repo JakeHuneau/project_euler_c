@@ -1,5 +1,4 @@
 #include "prime.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -15,7 +14,5 @@ int main() {
 
   free(sieve);
 
-  printf("%lu\n", sum);
-
-  return 0;
+  return sum != 142913828922;
 }

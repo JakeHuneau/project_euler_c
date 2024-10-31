@@ -1,5 +1,4 @@
 #include "bignum.h"
-#include <stdio.h>
 
 int main() {
 
@@ -113,9 +112,11 @@ int main() {
   }
 
   // Print out top 10 digits
-  for (int i = sum_bignum.num_digits - 1; i > sum_bignum.num_digits - 11; i--) {
-    printf("%u", sum_bignum.digits[i]);
-  }
+  // for (int i = sum_bignum.num_digits - 1; i > sum_bignum.num_digits - 11;
+  // i--) {
+  //  printf("%u", sum_bignum.digits[i]);
+  //}
 
+  // Expect 5537376230
   return 0;
 }

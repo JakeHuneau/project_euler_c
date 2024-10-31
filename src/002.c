@@ -1,5 +1,4 @@
 #include "util.h"
-#include <stdio.h>
 
 int main() {
   int solution = 0;
@@ -20,5 +19,5 @@ int main() {
     fib2 += temp_fib;
   }
 
-  printf("%i\n", solution);
+  return solution != 4613732;
 }
